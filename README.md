@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧾 NOVAInvoice
+# 🧾 RTInvoice
 
 <img src="https://img.icons8.com/fluency/200/invoice.png" width="120"/>
 
