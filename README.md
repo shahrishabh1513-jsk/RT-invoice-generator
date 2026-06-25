@@ -65,8 +65,7 @@ It allows users to create, customize, and manage invoices with real-time calcula
 
 ## 📸 Screenshots
 
-<img width="1873" height="856" alt="Screenshot 2026-03-23 134937" src="https://github.com/user-attachments/assets/fcdeff2e-14ba-4d07-969e-0c1bd39a981c" />
-<img width="1576" height="874" alt="image" src="https://github.com/user-attachments/assets/21beecaa-980f-4f0a-802e-fc6d7fbbd7cd" />
+<img width="1080" height="1920" alt="Brown Neutral Simple Moodboard Your Story" src="https://github.com/user-attachments/assets/cac7f472-3cec-48e5-9053-692bd9dbc6da" />
 
 
 
