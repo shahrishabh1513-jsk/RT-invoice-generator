@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:F5E6CA,50:A8D8EA,100:F8C8DC&height=200&section=header&text=RT%20Invoice&fontSize=48&fontColor=4A4A4A&fontAlignY=45"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:F5E6CA,50:A8D8EA,100:F8C8DC&height=200&section=header&text=RT%20Invoice&fontSize=48&fontColor=ffffff&fontAlignY=45"/>
 
 <img src="https://shahrishabh1513-jsk.github.io/RT-invoice-generator/assets/logo.svg" width="100" alt="RT Invoice Logo"/>
 
@@ -62,30 +62,13 @@
 
 <div align="center">
 
-<table>
-<tr>
-<td align="center" width="33%">
-<b>🏠 Home</b><br/><br/>
 <a href="https://shahrishabh1513-jsk.github.io/RT-invoice-generator/" target="_blank">
-<img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fshahrishabh1513-jsk.github.io%2FRT-invoice-generator%2F?w=1000" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.12);"/>
+<img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fshahrishabh1513-jsk.github.io%2FRT-invoice-generator%2F?w=1200" width="85%" style="border-radius:10px; box-shadow: 0 6px 18px rgba(0,0,0,0.15);"/>
 </a>
-</td>
-<td align="center" width="33%">
-<b>🔐 Sign In</b><br/><br/>
-<a href="https://shahrishabh1513-jsk.github.io/RT-invoice-generator/login.html" target="_blank">
-<img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fshahrishabh1513-jsk.github.io%2FRT-invoice-generator%2Flogin.html?w=1000" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.12);"/>
-</a>
-</td>
-<td align="center" width="33%">
-<b>📝 Create Account</b><br/><br/>
-<a href="https://shahrishabh1513-jsk.github.io/RT-invoice-generator/signup.html" target="_blank">
-<img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fshahrishabh1513-jsk.github.io%2FRT-invoice-generator%2Fsignup.html?w=1000" width="100%" style="border-radius:8px; box-shadow: 0 4px 14px rgba(0,0,0,0.12);"/>
-</a>
-</td>
-</tr>
-</table>
 
-<br/>
+<sub>👆 Click to explore the live app</sub>
+
+<br/><br/>
 
 <a href="https://shahrishabh1513-jsk.github.io/RT-invoice-generator/" target="_blank">
   <img src="https://img.shields.io/badge/CREATE_YOUR_FIRST_INVOICE-A8D8EA?style=for-the-badge&logoColor=4A4A4A"/>
