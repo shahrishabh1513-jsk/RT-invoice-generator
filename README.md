@@ -14,7 +14,7 @@
 <a href="https://github.com/shahrishabh1513-jsk/RT-invoice-generator"><img src="https://img.shields.io/badge/REPOSITORY-View_Code-4A4A4A?style=for-the-badge&logo=github&logoColor=white"/></a>
 <a href="https://github.com/shahrishabh1513-jsk/RT-invoice-generator/stargazers"><img src="https://img.shields.io/badge/STAR-Support_This_Repo-F8C8DC?style=for-the-badge&logo=github&logoColor=4A4A4A"/></a>
 
-<br/><br/>
+<br/>
 
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
@@ -75,8 +75,6 @@
 </a>
 
 </div>
-
-> 💡 First-load screenshots can occasionally appear blank on `mshots` before the cache warms up — refresh once if that happens; it self-corrects within a minute.
 
 <div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:F8C8DC,50:A8D8EA,100:F5E6CA&height=3&section=header"/></div>
 
@@ -176,8 +174,6 @@ flowchart LR
     F --> G[🔗 Share via WhatsApp / Email / Link]
     G --> H[✅ Track Payment Status]
 ```
-
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:F8C8DC,50:A8D8EA,100:F5E6CA&height=3&section=header"/></div>
 
 ## 🛠️ Tech Stack
 
