@@ -1,10 +1,12 @@
 rt-invoice/
-├── index.html          ← Login / Signup page
+├── index.html          ← Login / Signup page (light theme)
 ├── dashboard.html      ← Invoice dashboard
 ├── css/
-│   ├── style.css       ← Global base styles, tokens, utilities
+│   ├── style.css       ← Global tokens, buttons, toast, shared animations
 │   ├── login.css       ← Login page styles
-│   └── dashboard.css   ← Dashboard + modal styles
-└── js/
-    ├── auth.js         ← Login, signup, session, logout
-    └── app.js          ← Invoice CRUD, calculations, print
+│   └── dashboard.css   ← Dashboard, modal & invoice preview styles
+├── js/
+│   ├── auth.js         ← Login, signup, session, logout
+│   └── app.js          ← Invoice CRUD, calculations, sharing, print
+└── assets/
+    └── logo.svg         ← RT Invoice seal / logo (also used as favicon & signature stamp)
