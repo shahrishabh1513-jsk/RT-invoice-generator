@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (isLogin) {
     initLoginPage();
     seedDemoAccount();
+    setupPasswordToggles();
+    setupPasswordStrength();
+    setupDemoAutofill();
   } else {
     checkAuth();
   }
@@ -52,6 +55,54 @@ function initLoginPage() {
       }
     });
   });
+}
+
+// ---- Show / hide password ----
+function setupPasswordToggles() {
+  document.querySelectorAll('.pw-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const input = document.getElementById(btn.dataset.target);
+      if (!input) return;
+      const show = input.type === 'password';
+      input.type = show ? 'text' : 'password';
+      btn.textContent = show ? '🙈' : '👁';
+      btn.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+    });
+  });
+}
+
+// ---- Password strength meter ----
+function setupPasswordStrength() {
+  const input = document.getElementById('signupPassword');
+  const meter = document.getElementById('pwStrength');
+  if (!input || !meter) return;
+  input.addEventListener('input', () => {
+    const val = input.value;
+    let score = 0;
+    if (val.length >= 6) score++;
+    if (val.length >= 10 && /[A-Z]/.test(val) && /[0-9]/.test(val)) score++;
+    if (val.length >= 10 && /[^A-Za-z0-9]/.test(val)) score++;
+    meter.classList.remove('weak', 'medium', 'strong');
+    if (!val) return;
+    if (score <= 1) meter.classList.add('weak');
+    else if (score === 2) meter.classList.add('medium');
+    else meter.classList.add('strong');
+  });
+}
+
+// ---- Tap-to-autofill demo account ----
+function setupDemoAutofill() {
+  const box = document.getElementById('fillDemo');
+  if (!box) return;
+  const fill = () => {
+    const email = document.getElementById('loginEmail');
+    const pass  = document.getElementById('loginPassword');
+    if (email) email.value = 'demo@rtinvoice.com';
+    if (pass)  pass.value  = 'password123';
+    showToast('Demo credentials filled — hit Sign In', 'success');
+  };
+  box.addEventListener('click', fill);
+  box.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fill(); } });
 }
 
 // ---- Handle Login ----
@@ -108,6 +159,7 @@ function handleSignup(event) {
   document.getElementById('loginEmail').value = email;
   ['signupName','signupEmail','signupPassword','signupConfirmPassword']
     .forEach(id => { document.getElementById(id).value = ''; });
+  document.getElementById('pwStrength')?.classList.remove('weak', 'medium', 'strong');
 }
 
 // ---- Check Auth (dashboard) ----
@@ -139,9 +191,12 @@ function showToast(message, type = 'success') {
   if (!toast) return;
   toast.textContent = message;
   toast.className   = `toast ${type}`;
-  toast.classList.remove('hidden');
+  toast.classList.remove('hidden', 'leaving');
   clearTimeout(toast._timer);
-  toast._timer = setTimeout(() => toast.classList.add('hidden'), 3200);
+  toast._timer = setTimeout(() => {
+    toast.classList.add('leaving');
+    setTimeout(() => toast.classList.add('hidden'), 280);
+  }, 3200);
 }
 
 // ---- Exports ----
