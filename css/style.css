@@ -32,9 +32,9 @@
 
   --grad: linear-gradient(135deg, #5b4fe0 0%, #8b6ff0 48%, #12a883 100%);
   --grad-warm: linear-gradient(135deg, #ea9c2e 0%, #e15a5f 100%);
-  --grad-mesh: radial-gradient(circle at 15% 20%, rgba(91,79,224,0.14) 0%, transparent 45%),
-               radial-gradient(circle at 85% 15%, rgba(18,168,131,0.12) 0%, transparent 45%),
-               radial-gradient(circle at 50% 90%, rgba(234,156,46,0.10) 0%, transparent 45%);
+  --grad-mesh: radial-gradient(circle at 15% 20%, rgba(91, 79, 224, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(18, 168, 131, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(234, 156, 46, 0.10) 0%, transparent 45%);
 
   --r-sm: 8px;
   --r-md: 14px;
@@ -56,9 +56,17 @@
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--font-body);
@@ -70,7 +78,10 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
@@ -85,15 +96,33 @@ body {
 }
 
 /* ---- Scrollbar ---- */
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
 
-::selection { background: rgba(91, 79, 224, 0.16); color: var(--ink); }
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+::selection {
+  background: rgba(91, 79, 224, 0.16);
+  color: var(--ink);
+}
 
 /* ---- Utilities ---- */
-.hidden { display: none !important; }
+.hidden {
+  display: none !important;
+}
 
 /* ---- Buttons ---- */
 .btn-primary {
@@ -121,7 +150,9 @@ body {
   background-position: 100% 0;
 }
 
-.btn-primary:active { transform: translateY(0) scale(0.98); }
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+}
 
 .btn-secondary {
   font-family: var(--font-body);
@@ -156,7 +187,10 @@ body {
   transition: all 0.2s var(--ease-smooth);
 }
 
-.btn-ghost:hover { background: var(--surface); color: var(--ink); }
+.btn-ghost:hover {
+  background: var(--surface);
+  color: var(--ink);
+}
 
 .btn-danger-ghost {
   font-family: var(--font-body);
@@ -171,10 +205,18 @@ body {
   transition: all 0.2s var(--ease-smooth);
 }
 
-.btn-danger-ghost:hover { background: var(--rose); color: var(--white); transform: translateY(-1px); }
+.btn-danger-ghost:hover {
+  background: var(--rose);
+  color: var(--white);
+  transform: translateY(-1px);
+}
 
 /* ---- Form Fields ---- */
-.form-field { display: flex; flex-direction: column; gap: 7px; }
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
 
 .form-field label {
   font-size: 11px;
@@ -205,7 +247,11 @@ body {
   box-shadow: 0 0 0 4px rgba(91, 79, 224, 0.10);
 }
 
-.form-field textarea { resize: vertical; min-height: 68px; font-family: var(--font-body); }
+.form-field textarea {
+  resize: vertical;
+  min-height: 68px;
+  font-family: var(--font-body);
+}
 
 /* ---- Toast ---- */
 .toast {
@@ -228,24 +274,63 @@ body {
   border-left: 3px solid var(--violet);
 }
 
-.toast::before { content: '✓'; font-size: 16px; color: #4fe0b0; font-weight: 700; flex-shrink: 0; }
-.toast.error { border-left-color: var(--rose); }
-.toast.error::before { content: '✕'; color: #ff8b8f; }
-.toast.warning { border-left-color: var(--amber); }
-.toast.warning::before { content: '⚠'; color: var(--amber); }
-.toast.hidden { display: none; }
+.toast::before {
+  content: '✓';
+  font-size: 16px;
+  color: #4fe0b0;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.toast.error {
+  border-left-color: var(--rose);
+}
+
+.toast.error::before {
+  content: '✕';
+  color: #ff8b8f;
+}
+
+.toast.warning {
+  border-left-color: var(--amber);
+}
+
+.toast.warning::before {
+  content: '⚠';
+  color: var(--amber);
+}
+
+.toast.hidden {
+  display: none;
+}
 
 @keyframes toastIn {
-  from { transform: translateX(120%) scale(0.9); opacity: 0; }
-  to { transform: translateX(0) scale(1); opacity: 1; }
+  from {
+    transform: translateX(120%) scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes toastOut {
-  from { transform: translateX(0) scale(1); opacity: 1; }
-  to { transform: translateX(120%) scale(0.9); opacity: 0; }
+  from {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(120%) scale(0.9);
+    opacity: 0;
+  }
 }
 
-.toast.leaving { animation: toastOut 0.3s var(--ease-smooth) forwards; }
+.toast.leaving {
+  animation: toastOut 0.3s var(--ease-smooth) forwards;
+}
 
 /* ---- Ambient gradient blobs (background decoration) ---- */
 .orb {
@@ -256,30 +341,82 @@ body {
   animation: orbFloat 10s ease-in-out infinite;
 }
 
-.orb-1 { width: 420px; height: 420px; background: radial-gradient(circle, rgba(91,79,224,0.20) 0%, transparent 70%); top: -120px; left: -100px; animation-delay: 0s; }
-.orb-2 { width: 320px; height: 320px; background: radial-gradient(circle, rgba(18,168,131,0.18) 0%, transparent 70%); top: 45%; right: -90px; animation-delay: -3.2s; }
-.orb-3 { width: 280px; height: 280px; background: radial-gradient(circle, rgba(234,156,46,0.16) 0%, transparent 70%); bottom: 60px; left: 32%; animation-delay: -5.6s; }
+.orb-1 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(91, 79, 224, 0.20) 0%, transparent 70%);
+  top: -120px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(18, 168, 131, 0.18) 0%, transparent 70%);
+  top: 45%;
+  right: -90px;
+  animation-delay: -3.2s;
+}
+
+.orb-3 {
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(234, 156, 46, 0.16) 0%, transparent 70%);
+  bottom: 60px;
+  left: 32%;
+  animation-delay: -5.6s;
+}
 
 @keyframes orbFloat {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(22px, -28px) scale(1.06); }
-  66% { transform: translate(-18px, 22px) scale(0.94); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(22px, -28px) scale(1.06);
+  }
+
+  66% {
+    transform: translate(-18px, 22px) scale(0.94);
+  }
 }
 
 /* ---- Generic fade/rise-in used across pages ---- */
 @keyframes riseIn {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes popIn {
-  from { opacity: 0; transform: scale(0.92); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* ---- Signature / seal shared styles (used in invoice) ---- */
@@ -301,5 +438,5 @@ body {
   position: absolute;
   inset: 4px;
   border-radius: 50%;
-  border: 1px dashed rgba(255,255,255,0.55);
+  border: 1px dashed rgba(255, 255, 255, 0.55);
 }
