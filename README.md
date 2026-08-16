@@ -68,7 +68,7 @@
 
 <sub>👆 Click to explore the live app</sub>
 
-<br/><br/>
+<br/>
 
 <a href="https://shahrishabh1513-jsk.github.io/RT-invoice-generator/" target="_blank">
   <img src="https://img.shields.io/badge/CREATE_YOUR_FIRST_INVOICE-A8D8EA?style=for-the-badge&logoColor=4A4A4A"/>
