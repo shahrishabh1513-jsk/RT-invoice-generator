@@ -4,7 +4,7 @@
 <img src="https://github.com/user-attachments/assets/90c19f97-8b0b-4df1-96c4-a288d337503c" width="110" alt="Shah Rishabh badge logo"/>
 </td>
 <td width="70%" align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:F5E6CA,50:A8D8EA,100:F8C8DC&height=200&section=header&text=RT%20Invoice&fontSize=48&fontColor=ffffff&fontAlignY=45" width="100%"/>
+<img src="https://shahrishabh1513-jsk.github.io/RT-invoice-generator/assets/logo.svg" width="100%"/>
 </td>
 <td width="15%" align="center">
 <img src="https://github.com/user-attachments/assets/41de0edc-f0a3-474a-9156-d8b3d10d41ba" width="110" alt="Shah Rishabh badge logo"/>
